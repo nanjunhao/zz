@@ -1,0 +1,97 @@
+
+
+
+body {
+  font-family: 'Helvetica', 'Verdana', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:#ECDD7D;
+  
+}
+h2{
+  text-align:center;
+}
+
+
+.header{background-color:#ECB67D;
+}
+.grid-container{
+	display:grid;
+  grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+	   'header header header header'
+	   'left left left left'
+     'right right right right';
+	   
+}
+@media only screen and (min-width: 600px){
+	.grid-container {
+		grid-template-areas:
+		   'header header header header'
+	       'left left right right';
+	       
+		/* grid-columu-gap:10px; - if you want gap between thecolumns*/
+	}
+}
+.left,
+.right{
+  height:800px;
+	padding:20px;
+  display:grid;
+  justify-items:center;  
+  align-items:center; 
+  /*background-image:url("https://cdn.glitch.com/064e51f8-9243-4918-89c0-99ebfcc8ec29%2F1.jpg?v=1575058646810");
+  background-size: cover;
+  background-repeat:no-repeat;*/
+  
+}
+.header{
+	grid-area: header;
+	/*background-color: ;*/
+	padding: 10px;
+	/*text-align: ;*/
+}
+
+.right{
+  grid-area:right;
+}
+.grid-container {
+  position: relative;
+  display:grid;
+  
+}
+
+.left {
+  grid-area:left;
+}
+
+.left1 {
+ 
+ 
+  width: auto;
+  text-align: center;
+  font-size: 18px;
+ 
+}
+.left2{
+   
+  width: 90%;
+  text-align: center;
+  font-size: 18px;
+ 
+}
+.right1 {
+ 
+ 
+  width: auto;
+  text-align: center;
+  font-size: 18px;
+ 
+}
+.right2{
+   
+  width: 90%;
+  text-align: center;
+  font-size: 18px;
+ 
+}
