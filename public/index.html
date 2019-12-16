@@ -1,0 +1,68 @@
+
+
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+    <meta name="description" content="A sample weather app">
+    <meta name="theme-color" content="#2F3BA2" />
+    <link rel="icon" href="https://cdn.glitch.com/064e51f8-9243-4918-89c0-99ebfcc8ec29%2Ffavicon%20(2).ico?v=1575318241549" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div id="card" class="header">
+        <h2>Junhao's dictionary</h2>
+      </div>
+
+      <div id="box2" class="left">
+        <div>
+          <div id="box21" class="left1">
+           <label>
+             <input type="wordbox" id="input" value="horse" />
+            <button onclick="search()">
+              Submit
+            </button>
+             </label> 
+            <pre id="api"></pre>
+          </div>
+          <div id="box22" class="left2">
+            <pre id="word"></pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="box1" class="right">
+        
+        <div>
+          <div id="box11" class="right1">
+            
+          <p id="explain"></p>
+       
+          </div>
+        </div>
+          <div id="box12" class="right2">
+         <audio
+          controls="" volume="0.9"
+          id="player"
+          src="https://media.merriam-webster.com/soundc11/h/house001.wav">
+        </audio>
+
+          </div>
+      </div>
+    </div>
+    <script src="client.js"></script>
+    <script src="addserviceworker.js"></script>
+      <script src="service-worker.js"></script>
+  </body>
+</html>
