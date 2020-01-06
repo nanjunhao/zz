@@ -63,7 +63,7 @@ fetch(url_ft2)
 let jsonObject = null;
 let searchForm = null;
 const url_ft3 =
-  "https://www.dictionaryapi.com/api/v3/references/sd2/json/horse?%20key=054fe729-72cc-439c-bb07-4e5c8768cf16";
+  "https://www.dictionaryapi.com/api/v3/references/sd2/json/horse?key=054fe729-72cc-439c-bb07-4e5c8768cf16";
 function getAPIData(searchWord) {
   fetch(constructURLForWord(searchWord))
     .then(resp => resp.json()) // Transform the data into json
@@ -71,6 +71,7 @@ function getAPIData(searchWord) {
       console.log("getting api for" + searchWord);
       displayDefinition(data);
       sound(data);
+      getJsonFromCache(data);
       /*document.getElementById("api").innerHTML =
         "<h1>Fun dictionary api</h1>" +
         JSON.stringify(data, undefined, 2) +
@@ -120,11 +121,11 @@ function sound(data) {
     soundWord +
     ".wav";
 }
-function getForecastFromCache(coords) {
+function getJsonFromCache(data) {
   if (!("caches" in window)) {
     return null;
   }
-  const url = `${window.location.origin}/forecast/${coords}`;
+  const url = `${window.location.origin}/json/${data}`;
   return caches
     .match(url)
     .then(response => {
