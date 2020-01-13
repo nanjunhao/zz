@@ -17,7 +17,7 @@
   {
    "src": "/images/android-icon-72x72.png",
    "sizes": "72x72",
-   "type": "image\/png",
+   "type": "image/png",
    "density": "1.5"
   },
   {
@@ -35,6 +35,12 @@
   {
    "src": "/images/android-icon-192x192.png",
    "sizes": "192x192",
+   "type": "image/png",
+   "density": "4.0"
+  },
+ {
+   "src": "/images/512x512.png",
+   "sizes": "512x512",
    "type": "image/png",
    "density": "4.0"
   }],

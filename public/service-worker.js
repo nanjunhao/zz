@@ -2,10 +2,10 @@
 
 // CODELAB: Add list of files to cache here.
 const FILES_TO_CACHE = [
-  "index.html",
-  "client.js",
-  "style.css",
-
+  'index.html',
+  'client.js',
+  'style.css',
+  'install.js',
 ];
 
 const CACHE_NAME = "static-cache-v2";
